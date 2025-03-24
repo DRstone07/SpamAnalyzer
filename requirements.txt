@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 streamlit
 pandas
 numpy
@@ -6,12 +5,4 @@ scikit-learn
 matplotlib
 seaborn
 wordcloud
-=======
-streamlit
-pandas
-numpy
-scikit-learn
-matplotlib
-seaborn
-wordcloud
->>>>>>> 63b7026 (Add untracked files before rebase)
+
