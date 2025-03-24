@@ -31,9 +31,11 @@ model_pipeline.fit(X_train, y_train)
 st.markdown(
     """
     <style>
-    .reportview-container {
-        background: url("pexels_bg.jpg");
-        background-size: cover;
+    .stApp {
+        background-color: #E9F3E7 !important;
+    }
+    textarea {
+        background-color: #D4C8C8 !important;
     }
     .title {
         text-align: center;
@@ -116,7 +118,9 @@ if st.button("Check"):
             st.success("The message is **legitimate (not spam)**.")
         
         # Create a pie chart based on the prediction probabilities
-        fig, ax = plt.subplots()
+        fig, ax = plt.subplots(figsize=(10, 5))
+        fig.patch.set_facecolor("#D4C8C8")
+        ax.set_facecolor("#D4C8C8")
         ax.pie(values, labels=labels, autopct='%1.1f%%', startangle=90,
                colors=['#d3ed5f', '#627a35'])
         ax.set_title("Message Spam Component Distribution", fontfamily='Cooper Black')
@@ -139,6 +143,8 @@ if st.button("Check"):
         
         # Plot the word cloud using matplotlib
         fig_wc, ax_wc = plt.subplots(figsize=(10, 5))
+        fig_wc.patch.set_facecolor("#D4C8C8")
+        ax_wc.set_facecolor("#D4C8C8")
         ax_wc.imshow(wordcloud, interpolation='bilinear')
         ax_wc.axis('off')
         ax_wc.set_title("Word Cloud for " + ("Spam Messages\n" if prediction.lower() == "spam" else "Non-spam Messages\n"),
